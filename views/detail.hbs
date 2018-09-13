@@ -1,0 +1,16 @@
+<body {{#if dark}} style="background-color:black; color:white;" {{/if}}> 
+
+<h1>Tu meme se llama {{title}}</h1>
+<img src="{{link}}" alt="">
+<p>todos los detalles del meme</p>
+<div>
+  <p>
+    Comentarios
+  </p>
+  {{!-- <a href="/memes/{{_id}}?dark=true"><button>Cambio de color</button></a> --}}
+  <form action="/memes/{{_id}}">
+  <input type="hidden" name="dark" value="true">
+  <input type="submit" value="cambiar tema">
+  </form>
+</div>
+</body> 
